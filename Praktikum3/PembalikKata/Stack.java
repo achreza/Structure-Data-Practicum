@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modul3;
+package PembalikKata;
 
 /**
  *
@@ -12,24 +12,24 @@ package modul3;
 class Stack {
 
     private int maxSize;
-    private long[] stackArray;
+    private char[] stackArray;
     private int top;
 
     public Stack(int size) {
         maxSize = size;
-        stackArray = new long[maxSize];
+        stackArray = new char[maxSize];
         top = -1;
     }
 
-    public void push(long item) {
+    public void push(char item) {
         stackArray[++top] = item;
     }
 
-    public long pop() {
+    public char pop() {
         return stackArray[top--];
     }
 
-    public long peek() {
+    public char peek() {
         return stackArray[top];
     }
 
@@ -41,5 +41,3 @@ class Stack {
         return (top == maxSize - 1);
     }
 }
-
-
