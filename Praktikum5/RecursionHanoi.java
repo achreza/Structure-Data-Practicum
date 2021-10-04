@@ -13,20 +13,21 @@ import java.util.Scanner;
  */
 public class RecursionHanoi {
     public static void main(String[] args) {
-        RecursionHanoi hanoi=new RecursionHanoi();
         Scanner scanner=new Scanner(System.in);
-        System.out.print("Jumlah cakram :");
+        RecursionHanoi hanoi=new RecursionHanoi();
+        
+        System.out.print("Masukkan Jumlah Cakram :");
         int cakram=scanner.nextInt();
-        System.out.println("Hasil Rekursi :");
+        System.out.println("Hasil Recursion :");
         hanoi.doMenara(cakram,'A' ,'B', 'C');
     }
     public void doMenara(int cakram, char first,char mid, char last){
         if (cakram==1) {
-            System.out.println("Pindahkan cakram "+cakram+" dari "+first+" ke "+last);
+            System.out.println("Memindah cakram "+cakram+" dari "+first+" ke "+last);
         }
         else{
             doMenara(cakram-1, first, last, mid);
-            System.out.println("Pindahkan cakram "+cakram+" dari "+first+" ke "+last);
+            System.out.println("Memindah cakram "+cakram+" dari "+first+" ke "+last);
             doMenara(cakram-1, mid, first, last);
         }
     }
